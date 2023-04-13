@@ -54,6 +54,3 @@ SELECT item, price, popularity
 FROM store
 order by popularity asc 
 limit 5; 
-
-
-
