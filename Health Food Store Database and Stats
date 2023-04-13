@@ -1,24 +1,22 @@
-
 ---Create a store database
 
 CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, popularity INTEGER);
 
 INSERT INTO store VALUES (1, "basil", "produce", 1.99, 42);
-INSERT INTO store VALUES (2, "kiwi", "produce", 2.99, 56);
+INSERT INTO store VALUES (2, "kiwi", "produce", 2.69, 56);
 INSERT INTO store VALUES (3, "face wash", "hygiene", 6.99, 68);
-INSERT INTO store VALUES (4, "granola", "bulk", 2.99, 72);
+INSERT INTO store VALUES (4, "granola", "bulk", 1.59, 72);
 INSERT INTO store VALUES (5, "chicken sausage", "meat", 5.99, 46);
 INSERT INTO store VALUES (6, "pasta salad", "fresh", 3.49, 64);
 INSERT INTO store VALUES (7, "quiche", "fresh", 5.99, 38);
 INSERT INTO store VALUES (8, "cotton balls", "hygiene", 3.99, 54);
 INSERT INTO store VALUES (9, "lamb chops", "meat", 17.99, 60);
 INSERT INTO store VALUES (10, "broccoli", "frozen", 2.79, 51);
-INSERT INTO store VALUES (11, "pineapple", "frozen", 4.99, 53);
+INSERT INTO store VALUES (11, "apples", "produce", 1.49, 70);
 INSERT INTO store VALUES (12, "oats", "bulk", 2.99, 82);
-INSERT INTO store VALUES (13, "vitamin b12", "health", 12.99, 32);
+INSERT INTO store VALUES (13, "vitamin b12", "health", 12.99, 58);
 INSERT INTO store VALUES (14, "multi vitamins", "health", 10.99, 88);
 INSERT INTO store VALUES (15, "tortilla chips", "snacks", 4.99, 77);
-
 
 
 
@@ -35,10 +33,6 @@ SELECT AVG(price) "avg health item price"
 FROM store
 where section='health'; 
 
----What is the avg price of items in the produce section? 
-SELECT AVG(price) "avg produce item price"
-FROM store
-where section='produce'; 
 
 ---What is the avg price of items in the hygiene section? 
 SELECT AVG(price) "avg hygiene item price"
@@ -54,8 +48,12 @@ FROM store
 order by popularity desc
 limit 5; 
 
+
 ---What are the 5 least popular items? 
 SELECT item, price, popularity
 FROM store
 order by popularity asc 
 limit 5; 
+
+
+
