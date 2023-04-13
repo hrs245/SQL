@@ -19,13 +19,9 @@ INSERT INTO store VALUES (14, "multi vitamins", "health", 10.99, 88);
 INSERT INTO store VALUES (15, "tortilla chips", "snacks", 4.99, 77);
 
 
-
-
 ---Display the database ordered by price. 
 SELECT * FROM store
 ORDER BY price desc; 
-
-
 
 
 ---What is the avg price of items in the health section? 
@@ -33,13 +29,10 @@ SELECT AVG(price) "avg health item price"
 FROM store
 where section='health'; 
 
-
 ---What is the avg price of items in the hygiene section? 
 SELECT AVG(price) "avg hygiene item price"
 FROM store
 where section='hygiene'; 
-
-
 
 
 ---What are the 5 most popular items? 
@@ -47,7 +40,6 @@ SELECT item, price, popularity
 FROM store
 order by popularity desc
 limit 5; 
-
 
 ---What are the 5 least popular items? 
 SELECT item, price, popularity
